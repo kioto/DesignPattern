@@ -11,24 +11,16 @@ class Plus : public IOperator
 {
 public:
   virtual ~Plus(void) {}
-  virtual int calc(int lhs, int rhs) {
-    return lhs + rhs;
-  }
-  const char* getPlusChar(void) {
-    return "+";
-  }
+  virtual int calc(int lhs, int rhs) { return lhs + rhs; }
+  const char* getPlusChar(void) { return "+"; }
 };
 
 class Minus : public IOperator
 {
 public:
   virtual ~Minus(void) {}
-  virtual int calc(int lhs, int rhs) {
-    return lhs - rhs;
-  }
-  const char* getMinusChar(void) {
-    return "-";
-  }
+  virtual int calc(int lhs, int rhs) { return lhs - rhs; }
+  const char* getMinusChar(void) { return "-"; }
 };
 
 int exec(IOperator* ope, int opr1, int opr2)
